@@ -96,8 +96,7 @@ mid_new["group"]
 count_group = mid_new["group"].value_counts()
 count_group
 count_group.plot.bar(rot = 0)
-plot.clf()
-plot.show()
+
 ```
 
 

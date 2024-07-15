@@ -109,6 +109,6 @@
     "href": "hw1.html#막대그래프",
     "title": "hw1",
     "section": "05. 막대그래프",
-    "text": "05. 막대그래프\n\ncount_group = mid_new[\"group\"].value_counts()\ncount_group\ncount_group.plot.bar(rot = 0)\nplot.clf()\nplot.show()\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "05. 막대그래프\n\ncount_group = mid_new[\"group\"].value_counts()\ncount_group\ncount_group.plot.bar(rot = 0)"
   }
 ]
