@@ -23,15 +23,92 @@
   {
     "objectID": "hw1.html",
     "href": "hw1.html",
-    "title": "LS 빅데이터 스쿨 3기_김재희",
+    "title": "hw1",
     "section": "",
-    "text": "안녕하세요 데이터 분석 김재희입니다\nLIST 1. 항목 1 2. 항목 2 3. 항목 3\n\nimport pandas as pd\n\ndf= pd.DataFrame({\n    \"col1\":[1,2,3,]\n})\ndf\n\n\n\n\n\n\n\n\ncol1\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3"
+    "text": "##데이터분석_HW #84P\n\nimport pandas as pd\n\ndf= pd.DataFrame({\n    \"col1\":[1,2,3,]\n})\ndf\n\npd.DataFrame()\ndf= pd.DataFrame({\n    '제품' : [\"사과\", \"딸기\",\"수박\"],\n    '가격' : [1800,1500,3000],\n    '판매량' : [24,38,13]\n    })\ndf\nsum(df['가격'] / 3)\n\n2100.0"
   },
   {
     "objectID": "hw1.html#홈페이지-첫-화면입니다",
     "href": "hw1.html#홈페이지-첫-화면입니다",
-    "title": "LS 빅데이터 스쿨 3기_김재희",
+    "title": "hw1",
     "section": "",
-    "text": "안녕하세요 데이터 분석 김재희입니다\nLIST 1. 항목 1 2. 항목 2 3. 항목 3\n\nimport pandas as pd\n\ndf= pd.DataFrame({\n    \"col1\":[1,2,3,]\n})\ndf\n\n\n\n\n\n\n\n\ncol1\n\n\n\n\n0\n1\n\n\n1\n2\n\n\n2\n3"
+    "text": "안녕하세요 데이터 분석 김재희입니다\nLIST 1. 항목 1 2. 항목 2 3. 항목 3\n\nimport pandas as pd\n\ndf= pd.DataFrame({\n    \"col1\":[1,2,3,]\n})\ndf\n\npd.DataFrame()\ndf= pd.DataFrame({\n    '제품' : [\"사과\", \"딸기\",\"수박\"],\n    '가격' : [1800,1500,3000],\n    '판매량' : [24,38,13]\n    })\ndf\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13"
+  },
+  {
+    "objectID": "hw1.html#가격-평균",
+    "href": "hw1.html#가격-평균",
+    "title": "hw1",
+    "section": "가격 평균",
+    "text": "가격 평균\n\nsum(df['가격'] / 3)\n\n2100.0"
+  },
+  {
+    "objectID": "hw1.html#판매량-평균",
+    "href": "hw1.html#판매량-평균",
+    "title": "hw1",
+    "section": "판매량 평균",
+    "text": "판매량 평균\n\nsum(df['가격'] / 3)\n\n2100.0"
+  },
+  {
+    "objectID": "hw1.html#p-1",
+    "href": "hw1.html#p-1",
+    "title": "hw1",
+    "section": "115p",
+    "text": "115p"
+  },
+  {
+    "objectID": "hw1.html#복사본-만들기",
+    "href": "hw1.html#복사본-만들기",
+    "title": "hw1",
+    "section": "01복사본 만들기",
+    "text": "01복사본 만들기\n\nmpg_new = mpg.copy()"
+  },
+  {
+    "objectID": "hw1.html#수정하기",
+    "href": "hw1.html#수정하기",
+    "title": "hw1",
+    "section": "02수정하기",
+    "text": "02수정하기\n\nmpg_new = mpg_new.rename(columns = {\"cty\":\"city\"})\nmpg_new = mpg_new.rename(columns = {\"hwy\":\"highway\"})\nmpg_new\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns"
+  },
+  {
+    "objectID": "hw1.html#일부-출력하기",
+    "href": "hw1.html#일부-출력하기",
+    "title": "hw1",
+    "section": "03.일부 출력하기",
+    "text": "03.일부 출력하기\n\nmpg_new.head(5)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact"
+  },
+  {
+    "objectID": "hw1.html#데이터-특징-파악",
+    "href": "hw1.html#데이터-특징-파악",
+    "title": "hw1",
+    "section": "01. 데이터 특징 파악",
+    "text": "01. 데이터 특징 파악\n\nmid = pd.read_csv(\"data/midwest.csv\")\nmid\nmid.head(10)\nmid.tail(10)\nmid.shape\nmid.info()\nmid.describe()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 437 entries, 0 to 436\nData columns (total 28 columns):\n #   Column                Non-Null Count  Dtype  \n---  ------                --------------  -----  \n 0   PID                   437 non-null    int64  \n 1   county                437 non-null    object \n 2   state                 437 non-null    object \n 3   area                  437 non-null    float64\n 4   poptotal              437 non-null    int64  \n 5   popdensity            437 non-null    float64\n 6   popwhite              437 non-null    int64  \n 7   popblack              437 non-null    int64  \n 8   popamerindian         437 non-null    int64  \n 9   popasian              437 non-null    int64  \n 10  popother              437 non-null    int64  \n 11  percwhite             437 non-null    float64\n 12  percblack             437 non-null    float64\n 13  percamerindan         437 non-null    float64\n 14  percasian             437 non-null    float64\n 15  percother             437 non-null    float64\n 16  popadults             437 non-null    int64  \n 17  perchsd               437 non-null    float64\n 18  percollege            437 non-null    float64\n 19  percprof              437 non-null    float64\n 20  poppovertyknown       437 non-null    int64  \n 21  percpovertyknown      437 non-null    float64\n 22  percbelowpoverty      437 non-null    float64\n 23  percchildbelowpovert  437 non-null    float64\n 24  percadultpoverty      437 non-null    float64\n 25  percelderlypoverty    437 non-null    float64\n 26  inmetro               437 non-null    int64  \n 27  category              437 non-null    object \ndtypes: float64(15), int64(10), object(3)\nmemory usage: 95.7+ KB\n\n\n\n\n\n\n\n\n\nPID\narea\npoptotal\npopdensity\npopwhite\npopblack\npopamerindian\npopasian\npopother\npercwhite\n...\nperchsd\npercollege\npercprof\npoppovertyknown\npercpovertyknown\npercbelowpoverty\npercchildbelowpovert\npercadultpoverty\npercelderlypoverty\ninmetro\n\n\n\n\ncount\n437.000000\n437.000000\n4.370000e+02\n437.000000\n4.370000e+02\n4.370000e+02\n437.000000\n437.000000\n437.000000\n437.000000\n...\n437.000000\n437.000000\n437.000000\n4.370000e+02\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n437.000000\n\n\nmean\n1437.338673\n0.033169\n9.613030e+04\n3097.742985\n8.183992e+04\n1.102388e+04\n343.109840\n1310.464531\n1612.931350\n95.558441\n...\n73.965546\n18.272736\n4.447259\n9.364228e+04\n97.110267\n12.510505\n16.447464\n10.918798\n11.389043\n0.343249\n\n\nstd\n876.390266\n0.014679\n2.981705e+05\n7664.751786\n2.001966e+05\n7.895827e+04\n868.926751\n9518.394189\n18526.540699\n7.087358\n...\n5.843177\n6.261908\n2.408427\n2.932351e+05\n2.749863\n5.150155\n7.228634\n5.109166\n3.661259\n0.475338\n\n\nmin\n561.000000\n0.005000\n1.701000e+03\n85.050000\n4.160000e+02\n0.000000e+00\n4.000000\n0.000000\n0.000000\n10.694087\n...\n46.912261\n7.336108\n0.520291\n1.696000e+03\n80.902441\n2.180168\n1.918955\n1.938504\n3.547067\n0.000000\n\n\n25%\n670.000000\n0.024000\n1.884000e+04\n622.407407\n1.863000e+04\n2.900000e+01\n44.000000\n35.000000\n20.000000\n94.886032\n...\n71.325329\n14.113725\n2.997957\n1.836400e+04\n96.894572\n9.198715\n11.624088\n7.668009\n8.911763\n0.000000\n\n\n50%\n1221.000000\n0.030000\n3.532400e+04\n1156.208330\n3.447100e+04\n2.010000e+02\n94.000000\n102.000000\n66.000000\n98.032742\n...\n74.246891\n16.797562\n3.814239\n3.378800e+04\n98.169562\n11.822313\n15.270164\n10.007610\n10.869119\n0.000000\n\n\n75%\n2059.000000\n0.038000\n7.565100e+04\n2330.000000\n7.296800e+04\n1.291000e+03\n288.000000\n401.000000\n345.000000\n99.074935\n...\n77.195345\n20.549893\n4.949324\n7.284000e+04\n98.598636\n15.133226\n20.351878\n13.182182\n13.412162\n1.000000\n\n\nmax\n3052.000000\n0.110000\n5.105067e+06\n88018.396600\n3.204947e+06\n1.317147e+06\n10289.000000\n188565.000000\n384119.000000\n99.822821\n...\n88.898674\n48.078510\n20.791321\n5.023523e+06\n99.860384\n48.691099\n64.308477\n43.312464\n31.161972\n1.000000\n\n\n\n\n8 rows × 25 columns"
+  },
+  {
+    "objectID": "hw1.html#변수-수정",
+    "href": "hw1.html#변수-수정",
+    "title": "hw1",
+    "section": "02. 변수 수정",
+    "text": "02. 변수 수정\n\nmid = pd.read_csv(\"data/midwest.csv\")\nmid\nmid_new = mid.copy()\nmid_new\nmid_new = mid_new.rename(columns = {\"poptotal\":\"total\"})\nmid_new = mid_new.rename(columns = {\"popasian\":\"asian\"})\nmpg_new\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncity\nhighway\nfl\ncategory\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns"
+  },
+  {
+    "objectID": "hw1.html#파생변수-만들기",
+    "href": "hw1.html#파생변수-만들기",
+    "title": "hw1",
+    "section": "03. 파생변수 만들기",
+    "text": "03. 파생변수 만들기\n\nimport matplotlib.pyplot as plot\nmid_new[\"ratio\"] = mid_new[\"asian\"]/mid_new[\"total\"] *100\nmid_new\nmid_new[\"ratio\"].plot.hist()\nplot.show()"
+  },
+  {
+    "objectID": "hw1.html#합격-판정-변수",
+    "href": "hw1.html#합격-판정-변수",
+    "title": "hw1",
+    "section": "04. 합격 판정 변수",
+    "text": "04. 합격 판정 변수\n\nimport numpy as np\nx=mid_new[\"ratio\"].mean()\nmid_new[\"group\"]= np.where(mid_new[\"ratio\"]&gt;x,\"large\",\"small\")\nmid_new[\"group\"]\n\n0      small\n1      small\n2      small\n3      small\n4      small\n       ...  \n432    large\n433    small\n434    small\n435    large\n436    large\nName: group, Length: 437, dtype: object"
+  },
+  {
+    "objectID": "hw1.html#막대그래프",
+    "href": "hw1.html#막대그래프",
+    "title": "hw1",
+    "section": "05. 막대그래프",
+    "text": "05. 막대그래프\n\ncount_group = mid_new[\"group\"].value_counts()\ncount_group\ncount_group.plot.bar(rot = 0)\nplot.clf()\nplot.show()\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
 ]

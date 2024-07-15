@@ -1,18 +1,10 @@
 ---
-title: "LS 빅데이터 스쿨 3기_김재희"
+title: hw1
 jupyter: python3
 ---
 
-## 홈페이지 첫 화면입니다!
-
-**안녕하세요**
-데이터 분석 김재희입니다
-
-*LIST*
-1. 항목 1
-2. 항목 2
-3. 항목 3
-
+## 데이터분석_HW
+# 84P 
 ```{python}
 import pandas as pd
 
@@ -20,5 +12,92 @@ df= pd.DataFrame({
     "col1":[1,2,3,]
 })
 df
+
+pd.DataFrame()
+df= pd.DataFrame({
+    '제품' : ["사과", "딸기","수박"],
+    '가격' : [1800,1500,3000],
+    '판매량' : [24,38,13]
+    })
+df
+
 ```
+### 가격 평균 
+```{python}
+sum(df['가격'] / 3)
+```
+### 판매량 평균
+```{python}
+sum(df['판매량'] / 3)
+```
+
+# 115p
+```{python}
+
+import pandas as pd
+mpg = pd.read_csv("data/mpg.csv")
+mpg 
+mpg.shape
+```
+## 01복사본 만들기 
+```{python}
+mpg_new = mpg.copy()
+```
+## 02수정하기 
+```{python}
+mpg_new = mpg_new.rename(columns = {"cty":"city"})
+mpg_new = mpg_new.rename(columns = {"hwy":"highway"})
+mpg_new
+```
+## 03.일부 출력하기 
+```{python}
+mpg_new.head(5)
+```
+# 130p
+## 01. 데이터 특징 파악 
+```{python}
+mid = pd.read_csv("data/midwest.csv")
+mid
+mid.head(10)
+mid.tail(10)
+mid.shape
+mid.info()
+mid.describe()
+
+```
+## 02. 변수 수정 
+```{python}
+mid = pd.read_csv("data/midwest.csv")
+mid
+mid_new = mid.copy()
+mid_new
+mid_new = mid_new.rename(columns = {"poptotal":"total"})
+mid_new = mid_new.rename(columns = {"popasian":"asian"})
+mpg_new
+
+```
+## 03. 파생변수 만들기 
+```{python}
+import matplotlib.pyplot as plot
+mid_new["ratio"] = mid_new["asian"]/mid_new["total"] *100
+mid_new
+mid_new["ratio"].plot.hist()
+plot.show()
+```
+## 04. 합격 판정 변수 
+```{python}
+import numpy as np
+x=mid_new["ratio"].mean()
+mid_new["group"]= np.where(mid_new["ratio"]>x,"large","small")
+mid_new["group"]
+```
+## 05. 막대그래프
+```{python}
+count_group = mid_new["group"].value_counts()
+count_group
+count_group.plot.bar(rot = 0)
+plot.clf()
+plot.show()
+```
+
 
