@@ -140,6 +140,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./hw1.html" aria-current="page"> 
 <span class="menu-text">hw1</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hw2.html"> 
+<span class="menu-text">hw2</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -206,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="p" class="level1">
 <h1>84P</h1>
-<div id="4da1506a" class="cell" data-execution_count="1">
+<div id="f5853d28" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> pd.DataFrame({</span>
@@ -261,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="가격-평균" class="level3">
 <h3 class="anchored" data-anchor-id="가격-평균">가격 평균</h3>
-<div id="c8007c75" class="cell" data-execution_count="2">
+<div id="70d2a517" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'가격'</span>] <span class="op">/</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2100.0</code></pre>
@@ -270,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="판매량-평균" class="level3">
 <h3 class="anchored" data-anchor-id="판매량-평균">판매량 평균</h3>
-<div id="4e33dda3" class="cell" data-execution_count="3">
+<div id="f74ba10c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'판매량'</span>] <span class="op">/</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>25.0</code></pre>
@@ -280,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="p-1" class="level1">
 <h1>115p</h1>
-<div id="203af82d" class="cell" data-execution_count="4">
+<div id="e6edc21f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">"data/mpg.csv"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>mpg </span>
@@ -291,13 +295,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="복사본-만들기" class="level2">
 <h2 class="anchored" data-anchor-id="복사본-만들기">01복사본 만들기</h2>
-<div id="33abe295" class="cell" data-execution_count="5">
+<div id="a5d2419f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> mpg.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="수정하기" class="level2">
 <h2 class="anchored" data-anchor-id="수정하기">02수정하기</h2>
-<div id="5cbfcf60" class="cell" data-execution_count="6">
+<div id="db82212d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> mpg_new.rename(columns <span class="op">=</span> {<span class="st">"cty"</span>:<span class="st">"city"</span>})</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> mpg_new.rename(columns <span class="op">=</span> {<span class="st">"hwy"</span>:<span class="st">"highway"</span>})</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>mpg_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -487,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="일부-출력하기" class="level2">
 <h2 class="anchored" data-anchor-id="일부-출력하기">03.일부 출력하기</h2>
-<div id="25ce3fea" class="cell" data-execution_count="7">
+<div id="3810fd59" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mpg_new.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
@@ -593,7 +597,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>130p</h1>
 <section id="데이터-특징-파악" class="level2">
 <h2 class="anchored" data-anchor-id="데이터-특징-파악">01. 데이터 특징 파악</h2>
-<div id="561e0ffc" class="cell" data-execution_count="8">
+<div id="9461d1f2" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> pd.read_csv(<span class="st">"data/midwest.csv"</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>mid</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>mid.head(<span class="dv">10</span>)</span>
@@ -872,7 +876,7 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="변수-수정" class="level2">
 <h2 class="anchored" data-anchor-id="변수-수정">02. 변수 수정</h2>
-<div id="6a0919ab" class="cell" data-execution_count="9">
+<div id="f93c0519" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> pd.read_csv(<span class="st">"data/midwest.csv"</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mid</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>mid_new <span class="op">=</span> mid.copy()</span>
@@ -1066,7 +1070,7 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="파생변수-만들기" class="level2">
 <h2 class="anchored" data-anchor-id="파생변수-만들기">03. 파생변수 만들기</h2>
-<div id="2c100af5" class="cell" data-execution_count="10">
+<div id="c19799f7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plot</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mid_new[<span class="st">"ratio"</span>] <span class="op">=</span> mid_new[<span class="st">"asian"</span>]<span class="op">/</span>mid_new[<span class="st">"total"</span>] <span class="op">*</span><span class="dv">100</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>mid_new</span>
@@ -1083,7 +1087,7 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="합격-판정-변수" class="level2">
 <h2 class="anchored" data-anchor-id="합격-판정-변수">04. 합격 판정 변수</h2>
-<div id="0f7d7729" class="cell" data-execution_count="11">
+<div id="95571d49" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>mid_new[<span class="st">"ratio"</span>].mean()</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>mid_new[<span class="st">"group"</span>]<span class="op">=</span> np.where(mid_new[<span class="st">"ratio"</span>]<span class="op">&gt;</span>x,<span class="st">"large"</span>,<span class="st">"small"</span>)</span>
@@ -1106,7 +1110,7 @@ Name: group, Length: 437, dtype: object</code></pre>
 </section>
 <section id="막대그래프" class="level2">
 <h2 class="anchored" data-anchor-id="막대그래프">05. 막대그래프</h2>
-<div id="0f5e85f4" class="cell" data-execution_count="12">
+<div id="a10f276a" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>count_group <span class="op">=</span> mid_new[<span class="st">"group"</span>].value_counts()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>count_group</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>count_group.plot.bar(rot <span class="op">=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>jaehee - About</title>
+<title>jaehee - hw2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -127,12 +133,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./hw1.html"> 
 <span class="menu-text">hw1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./hw2.html" aria-current="page"> 
+<span class="menu-text">hw2</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -146,14 +156,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#데이터분석_hw2" id="toc-데이터분석_hw2" class="nav-link active" data-scroll-target="#데이터분석_hw2">데이터분석_HW2</a></li>
+  <li><a href="#p" id="toc-p" class="nav-link" data-scroll-target="#p">144P</a>
+  <ul class="collapse">
+  <li><a href="#q1.배기량-4이하-5이상-자동차의-hwy-평균-비교" id="toc-q1.배기량-4이하-5이상-자동차의-hwy-평균-비교" class="nav-link" data-scroll-target="#q1.배기량-4이하-5이상-자동차의-hwy-평균-비교">Q1.배기량 4이하 / 5이상 자동차의 hwy 평균 비교</a></li>
+  <li><a href="#a평균치" id="toc-a평균치" class="nav-link" data-scroll-target="#a평균치">a평균치</a></li>
+  <li><a href="#b평균치" id="toc-b평균치" class="nav-link" data-scroll-target="#b평균치">b평균치</a></li>
+  <li><a href="#q2.제조회사에-따른-도시-연비cty-차이" id="toc-q2.제조회사에-따른-도시-연비cty-차이" class="nav-link" data-scroll-target="#q2.제조회사에-따른-도시-연비cty-차이">Q2.제조회사에 따른 도시 연비(cty) 차이</a></li>
+  <li><a href="#audi-연비" id="toc-audi-연비" class="nav-link" data-scroll-target="#audi-연비">audi 연비</a></li>
+  <li><a href="#toyota-연비" id="toc-toyota-연비" class="nav-link" data-scroll-target="#toyota-연비">toyota 연비</a></li>
+  <li><a href="#chevrolet-ford-honda-자동차의-고속도로-연비-평균" id="toc-chevrolet-ford-honda-자동차의-고속도로-연비-평균" class="nav-link" data-scroll-target="#chevrolet-ford-honda-자동차의-고속도로-연비-평균">“chevrolet’ ‘ford’ ‘honda’ 자동차의 고속도로 연비 평균</a></li>
+  </ul></li>
+  <li><a href="#p-1" id="toc-p-1" class="nav-link" data-scroll-target="#p-1">153p</a></li>
+  <li><a href="#p-2" id="toc-p-2" class="nav-link" data-scroll-target="#p-2">158p</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">hw2</h1>
 </div>
 
 
@@ -170,15 +198,196 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>About this site</p>
-<div id="eb61045a" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>2</code></pre>
+<section id="데이터분석_hw2" class="level2">
+<h2 class="anchored" data-anchor-id="데이터분석_hw2">데이터분석_HW2</h2>
+</section>
+<section id="p" class="level1">
+<h1>144P</h1>
+<section id="q1.배기량-4이하-5이상-자동차의-hwy-평균-비교" class="level2">
+<h2 class="anchored" data-anchor-id="q1.배기량-4이하-5이상-자동차의-hwy-평균-비교">Q1.배기량 4이하 / 5이상 자동차의 hwy 평균 비교</h2>
+<div id="afc443ed" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">"data/mpg.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mpg</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mpg_a <span class="op">=</span> mpg.query(<span class="st">"displ&lt;=4"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>mpg_b <span class="op">=</span> mpg.query(<span class="st">"displ&gt;=5"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="a평균치" class="level2">
+<h2 class="anchored" data-anchor-id="a평균치">a평균치</h2>
+<div id="a080c0e2" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mpg_a[<span class="st">"hwy"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>np.float64(25.96319018404908)</code></pre>
+</div>
+</div>
+</section>
+<section id="b평균치" class="level2">
+<h2 class="anchored" data-anchor-id="b평균치">b평균치</h2>
+<div id="9654a40b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mpg_b[<span class="st">"hwy"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>np.float64(18.07894736842105)</code></pre>
+</div>
+</div>
+</section>
+<section id="q2.제조회사에-따른-도시-연비cty-차이" class="level2">
+<h2 class="anchored" data-anchor-id="q2.제조회사에-따른-도시-연비cty-차이">Q2.제조회사에 따른 도시 연비(cty) 차이</h2>
+<div id="53f228c7" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mpg</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mpg_audi <span class="op">=</span> mpg.query(<span class="st">"manufacturer == 'audi'"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>mpg_toyota <span class="op">=</span> mpg.query(<span class="st">"manufacturer == 'toyota'"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="audi-연비" class="level2">
+<h2 class="anchored" data-anchor-id="audi-연비">audi 연비</h2>
+<div id="c8259140" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mpg_audi[<span class="st">"cty"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>np.float64(17.61111111111111)</code></pre>
+</div>
+</div>
+</section>
+<section id="toyota-연비" class="level2">
+<h2 class="anchored" data-anchor-id="toyota-연비">toyota 연비</h2>
+<div id="40c4d755" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mpg_toyota[<span class="st">"cty"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>np.float64(18.529411764705884)</code></pre>
+</div>
+</div>
+</section>
+<section id="chevrolet-ford-honda-자동차의-고속도로-연비-평균" class="level2">
+<h2 class="anchored" data-anchor-id="chevrolet-ford-honda-자동차의-고속도로-연비-평균">“chevrolet’ ‘ford’ ‘honda’ 자동차의 고속도로 연비 평균</h2>
+<div id="31be7af7" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mpg</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>mpg.query(<span class="st">"manufacturer in ['chevrolet','ford','honda']"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>mpg_mean <span class="op">=</span> mpg.query(<span class="st">"manufacturer in ['chevrolet','ford','honda']"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>mpg_mean[<span class="st">"hwy"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>np.float64(22.50943396226415)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="p-1" class="level1">
+<h1>153p</h1>
+<div id="3a1a304f" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mpg</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mpg_audi <span class="op">=</span> mpg.query(<span class="st">"manufacturer == 'audi'"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>mpg_audi.sort_values(<span class="st">"hwy"</span>, ascending <span class="op">=</span> <span class="va">False</span>).head()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>mpg.query(<span class="st">"manufacturer == 'audi'"</span>)<span class="op">\</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>   .sort_values(<span class="st">"hwy"</span>, ascending <span class="op">=</span> <span class="va">False</span>)<span class="op">\</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>   .head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">manufacturer</th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">displ</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">cyl</th>
+<th data-quarto-table-cell-role="th">trans</th>
+<th data-quarto-table-cell-role="th">drv</th>
+<th data-quarto-table-cell-role="th">cty</th>
+<th data-quarto-table-cell-role="th">hwy</th>
+<th data-quarto-table-cell-role="th">fl</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>f</td>
+<td>20</td>
+<td>31</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>auto(av)</td>
+<td>f</td>
+<td>21</td>
+<td>30</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>manual(m5)</td>
+<td>f</td>
+<td>21</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>18</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>audi</td>
+<td>a4 quattro</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>4</td>
+<td>20</td>
+<td>28</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="p-2" class="level1">
+<h1>158p</h1>
+<div id="7d114c17" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

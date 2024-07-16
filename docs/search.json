@@ -110,5 +110,68 @@
     "title": "hw1",
     "section": "05. 막대그래프",
     "text": "05. 막대그래프\n\ncount_group = mid_new[\"group\"].value_counts()\ncount_group\ncount_group.plot.bar(rot = 0)"
+  },
+  {
+    "objectID": "hw2.html#배기량-4이하-5이상-자동차의-hwy-평균-비교",
+    "href": "hw2.html#배기량-4이하-5이상-자동차의-hwy-평균-비교",
+    "title": "hw2",
+    "section": "배기량 4이하 / 5이상 자동차의 hwy 평균 비교",
+    "text": "배기량 4이하 / 5이상 자동차의 hwy 평균 비교\n\nimport pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\nmpg\nmpg_a = mpg.query(\"displ&lt;=4\")\nmpg_b = mpg.query(\"displ&gt;=5\")"
+  },
+  {
+    "objectID": "hw2.html#평균치",
+    "href": "hw2.html#평균치",
+    "title": "hw2",
+    "section": "평균치",
+    "text": "평균치\n\nmpg_a[\"hwy\"].mean()\nmpg_b[\"hwy\"].mean()\n\nnp.float64(18.07894736842105)"
+  },
+  {
+    "objectID": "hw2.html#a평균치",
+    "href": "hw2.html#a평균치",
+    "title": "hw2",
+    "section": "a평균치",
+    "text": "a평균치\n\nmpg_a[\"hwy\"].mean()\n\nnp.float64(25.96319018404908)"
+  },
+  {
+    "objectID": "hw2.html#b평균치",
+    "href": "hw2.html#b평균치",
+    "title": "hw2",
+    "section": "b평균치",
+    "text": "b평균치\n\nmpg_b[\"hwy\"].mean()\n\nnp.float64(18.07894736842105)"
+  },
+  {
+    "objectID": "hw2.html#q1.배기량-4이하-5이상-자동차의-hwy-평균-비교",
+    "href": "hw2.html#q1.배기량-4이하-5이상-자동차의-hwy-평균-비교",
+    "title": "hw2",
+    "section": "Q1.배기량 4이하 / 5이상 자동차의 hwy 평균 비교",
+    "text": "Q1.배기량 4이하 / 5이상 자동차의 hwy 평균 비교\n\nimport pandas as pd\nmpg = pd.read_csv(\"data/mpg.csv\")\nmpg\nmpg_a = mpg.query(\"displ&lt;=4\")\nmpg_b = mpg.query(\"displ&gt;=5\")"
+  },
+  {
+    "objectID": "hw2.html#q2.제조회사에-따른-도시-연비cty-차이",
+    "href": "hw2.html#q2.제조회사에-따른-도시-연비cty-차이",
+    "title": "hw2",
+    "section": "Q2.제조회사에 따른 도시 연비(cty) 차이",
+    "text": "Q2.제조회사에 따른 도시 연비(cty) 차이\n\nmpg\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")"
+  },
+  {
+    "objectID": "hw2.html#audi-연비",
+    "href": "hw2.html#audi-연비",
+    "title": "hw2",
+    "section": "audi 연비",
+    "text": "audi 연비\n\nmpg_audi[\"cty\"].mean()\n\nnp.float64(17.61111111111111)"
+  },
+  {
+    "objectID": "hw2.html#toyota-연비",
+    "href": "hw2.html#toyota-연비",
+    "title": "hw2",
+    "section": "toyota 연비",
+    "text": "toyota 연비\n\nmpg_toyota[\"cty\"].mean()\n\nnp.float64(18.529411764705884)"
+  },
+  {
+    "objectID": "hw2.html#chevrolet-ford-honda-자동차의-고속도로-연비-평균",
+    "href": "hw2.html#chevrolet-ford-honda-자동차의-고속도로-연비-평균",
+    "title": "hw2",
+    "section": "“chevrolet’ ‘ford’ ‘honda’ 자동차의 고속도로 연비 평균",
+    "text": "“chevrolet’ ‘ford’ ‘honda’ 자동차의 고속도로 연비 평균\n\nmpg\nmpg.query(\"manufacturer in ['chevrolet','ford','honda']\")\nmpg_mean = mpg.query(\"manufacturer in ['chevrolet','ford','honda']\")\nmpg_mean[\"hwy\"].mean()\n\nnp.float64(22.50943396226415)"
   }
 ]

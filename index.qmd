@@ -1,19 +1,18 @@
 ---
 title: "LS 빅데이터 스쿨 3기_김재희"
 jupyter: python3
+toc: false
+about: 
+    id: hero-heading
+    template: jolla
+    image: images.jfif
+    links: 
+      - icon: twitter
+        text: twitter
+        href: https://twitter.com
+      - icon: github
+        text: github
+        href: https://github.com/jaeheekim-wp/mywebsite
 ---
 
-## 홈페이지 첫 화면입니다!
-
-**안녕하세요**
-데이터 분석 김재희입니다
-
-*LIST*
-1. 항목 1
-2. 항목 2
-3. 항목 3
-
-```{python}
-
-```
 
