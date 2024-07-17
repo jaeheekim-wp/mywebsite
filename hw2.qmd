@@ -47,6 +47,8 @@ mpg_mean = mpg.query("manufacturer in ['chevrolet','ford','honda']")
 mpg_mean["hwy"].mean()
 ```
 # 153p
+
+## Q1.audi자동차중 hwy가 1~5위에 해당하는 자동차의 데이터 출력
 ```{python}
 mpg
 mpg_audi = mpg.query("manufacturer == 'audi'")
@@ -57,13 +59,53 @@ mpg.query("manufacturer == 'audi'")\
    .head()
 ```
 # 158p
+
+## Q1.mpg 데이터 복사본과 cty+hwy 합산 연비 변수 
 ```{python}
 import pandas as pd
 import numpy as np 
+mpg = pd.read_csv("data/mpg.csv")
+mpg
+mpg_new = mpg.copy()
+mpg_new
+mpg_new.assign(total = mpg_new["cty"] + mpg_new["hwy"])
 
+```
+## Q2.평균 연비 변수 ( 합산 연비 변수 /2 )
+```{python}
+mpg_new=mpg_new.assign(
+        total = mpg_new["cty"] + mpg_new["hwy"],
+        mean = (mpg_new["cty"] + mpg_new["hwy"]) / 2
+        )
 
+mpg_new.assign(
+        total = mpg_new["cty"] + mpg_new["hwy"],
+        mean = lambda x : x["total"] / 2
+        )
+mpg_new        
+mpg_new.assign(
+        total = lambda x: x["cty"] + x["hwy"],
+        mean = lambda x : x["total"] / 2
+        )
+        
+mpg_new
+```
+## Q3.평균 연비 변수가 가장 높은 자동차 3종 
+```{python}
 
+mpg_new.sort_values("mean", ascending = False).head(3)
 
+```
+## Q4. 1~3번 문제를 해결할 수 있는 연결된 pandas 구문, 단, mpg 원본 사용 
+```{python}
+import pandas as pd
+import numpy as np 
+mpg = pd.read_csv("data/mpg.csv")
+mpg
 
+mpg.assign(total = lambda x: x["cty"] + x["hwy"],
+           mean = lambda x : x["total"] / 2)\
+   .sort_values("mean", ascending = False) \
+   .head(3)
 ```
 
