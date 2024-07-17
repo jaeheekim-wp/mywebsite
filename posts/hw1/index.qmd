@@ -1,5 +1,8 @@
 ---
-title: hw1
+title: "LS 빅데이터 스쿨 HW1"
+author : "재희"
+date : "2024-07-16"
+categories : [bigdata]
 jupyter: python3
 ---
 
