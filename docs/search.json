@@ -214,7 +214,7 @@
     "href": "blog.html",
     "title": "글 목록",
     "section": "",
-    "text": "계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\n계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/index.html#복사본-만들기",
@@ -404,5 +404,54 @@
     "title": "LS 빅데이터 스쿨 chap8",
     "section": "“barplot()” 사용하기",
     "text": "“barplot()” 사용하기\n데이터 전처리 하기\n\nmpg.groupby(\"drv\") \\\n...     .agg(mean_hwy = (\"hwy\",\"mean\"))\n\n# 변수 두개인 데이터 프레임화 as_index\ndf_mpg = mpg.groupby(\"drv\", as_index = False) \\\n            .agg(mean_hwy = (\"hwy\",\"mean\"))\ndf_mpg\n\n\n\n\n\n\n\n\ndrv\nmean_hwy\n\n\n\n\n0\n4\n19.174757\n\n\n1\nf\n28.160377\n\n\n2\nr\n21.000000\n\n\n\n\n\n\n\n*“barplot” 사용해서 그래프 그리기\n\nsns.barplot(data = df_mpg.sort_values(\"mean_hwy\", ascending = False),\n            x = \"drv\", y = \"mean_hwy\", hue = \"drv\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n*“countplot” 사용해서 그래프 그리기\n\nsns.countplot(data = mpg, x = \"drv\",hue = \"drv\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#파이썬-scipy-패키지-활용하여-다음-확률-구하기",
+    "href": "posts/hw3/hw3.html#파이썬-scipy-패키지-활용하여-다음-확률-구하기",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "파이썬 SCIPY 패키지 활용하여 다음 확률 구하기",
+    "text": "파이썬 SCIPY 패키지 활용하여 다음 확률 구하기"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.",
+    "href": "posts/hw3/hw3.html#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다.",
+    "text": "LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다."
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#상위-5에-해당하는-학생의-점수는",
+    "href": "posts/hw3/hw3.html#상위-5에-해당하는-학생의-점수는",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "상위 5%에 해당하는 학생의 점수는?",
+    "text": "상위 5%에 해당하는 학생의 점수는?\n\nnorm.ppf(0.95, loc=30, scale=4)\n\nnp.float64(36.579414507805886)"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html",
+    "href": "posts/hw3/hw3.html",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "",
+    "text": "from scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\n\nimport pandas as pd\nimport numpy as np\nimport math \n\ndef pdf(x, mu, sig):\n    a = 1 / (sig * np.sqrt(2 * np.pi))\n    b = np.exp((-0.5 * ((x - mu) / sig)) ** 2 )\n    return a ** b \n\nk=np.linspace(-2, 8, 100)\ny=norm.pdf(k, loc=3, scale=2)\n\nplt.plot(k, y, color=\"black\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#정규분포-pdf-값을-계산하는-자신만의-함수-정의-및-정규분포-mu3-sigma2의-pdf-그리기",
+    "href": "posts/hw3/hw3.html#정규분포-pdf-값을-계산하는-자신만의-함수-정의-및-정규분포-mu3-sigma2의-pdf-그리기",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "",
+    "text": "from scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\n\nimport pandas as pd\nimport numpy as np\nimport math \n\ndef pdf(x, mu, sig):\n    a = 1 / (sig * np.sqrt(2 * np.pi))\n    b = np.exp((-0.5 * ((x - mu) / sig)) ** 2 )\n    return a ** b \n\nk=np.linspace(-2, 8, 100)\ny=norm.pdf(k, loc=3, scale=2)\n\nplt.plot(k, y, color=\"black\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#a값",
+    "href": "posts/hw3/hw3.html#a값",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "a값",
+    "text": "a값\n\na = norm.cdf(3, loc=0, scale=1)\na\n\nnp.float64(0.9986501019683699)"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#b값",
+    "href": "posts/hw3/hw3.html#b값",
+    "title": "LS 빅데이터 스쿨 HW3",
+    "section": "b값",
+    "text": "b값\n\nb = 1 - norm.cdf(7, loc=0, scale=1) \nb\n\nnp.float64(1.2798651027878805e-12)"
   }
 ]
