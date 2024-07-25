@@ -194,14 +194,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#x-n2-32" id="toc-x-n2-32" class="nav-link" data-scroll-target="#x-n2-32">X ~ N(2, 3^2)</a></li>
   <li><a href="#px-3" id="toc-px-3" class="nav-link" data-scroll-target="#px-3">1) P(X &lt; 3)</a></li>
   <li><a href="#p2-x-5" id="toc-p2-x-5" class="nav-link" data-scroll-target="#p2-x-5">2) P(2 &lt; X &lt; 5)</a></li>
-  <li><a href="#px-3-or-x-7" id="toc-px-3-or-x-7" class="nav-link" data-scroll-target="#px-3-or-x-7">3) P(X &lt; 3 or X &gt; 7)</a>
-  <ul class="collapse">
-  <li><a href="#a값" id="toc-a값" class="nav-link" data-scroll-target="#a값">a값</a></li>
-  <li><a href="#b값" id="toc-b값" class="nav-link" data-scroll-target="#b값">b값</a></li>
-  </ul></li>
+  <li><a href="#px-3-or-x-7" id="toc-px-3-or-x-7" class="nav-link" data-scroll-target="#px-3-or-x-7">3) P(X &lt; 3 or X &gt; 7)</a></li>
   <li><a href="#q3." id="toc-q3." class="nav-link" data-scroll-target="#q3.">Q3.</a>
   <ul class="collapse">
-  <li><a href="#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다." id="toc-ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다." class="nav-link" data-scroll-target="#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.">LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다.</a></li>
+  <li><a href="#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다." id="toc-ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다." class="nav-link" data-scroll-target="#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.">LS 빅데이터 스쿨 학생들의 중간고사 점수는 ’평균’이 30이고, ’분산’이 4인 정규분포를 따른다.</a></li>
   <li><a href="#상위-5에-해당하는-학생의-점수는" id="toc-상위-5에-해당하는-학생의-점수는" class="nav-link" data-scroll-target="#상위-5에-해당하는-학생의-점수는">상위 5%에 해당하는 학생의 점수는?</a></li>
   </ul></li>
   </ul>
@@ -218,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Q1.</h1>
 <section id="정규분포-pdf-값을-계산하는-자신만의-함수-정의-및-정규분포-mu3-sigma2의-pdf-그리기" class="level2">
 <h2 class="anchored" data-anchor-id="정규분포-pdf-값을-계산하는-자신만의-함수-정의-및-정규분포-mu3-sigma2의-pdf-그리기">정규분포 PDF 값을 계산하는 자신만의 함수 정의 및 정규분포 MU=3, SIGMA=2의 PDF 그리기</h2>
-<div id="e5d94bcc" class="cell" data-execution_count="1">
+<div id="e8e5ac82" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> bernoulli</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
@@ -230,16 +226,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pdf(x, mu, sig):</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (sig <span class="op">*</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi))</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> np.exp((<span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> ((x <span class="op">-</span> mu) <span class="op">/</span> sig)) <span class="op">**</span> <span class="dv">2</span> )</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (sigma <span class="op">*</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> np.pi))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> (np.exp((<span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> ((x <span class="op">-</span> mu) <span class="op">/</span> sig)) <span class="op">**</span> <span class="dv">2</span> ))</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">**</span> b </span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>k<span class="op">=</span>np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">100</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>norm.pdf(k, loc<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.plot(k, y, color<span class="op">=</span><span class="st">"black"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 평균 3을 기준으로 양쪽으로 5씩 </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.plot(k, y, color<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -264,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="px-3" class="level1">
 <h1>1) P(X &lt; 3)</h1>
-<div id="071ddc97" class="cell" data-execution_count="2">
+<div id="271fa8fc" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>np.float64(0.6305586598182363)</code></pre>
@@ -273,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="p2-x-5" class="level1">
 <h1>2) P(2 &lt; X &lt; 5)</h1>
-<div id="d9c6794c" class="cell" data-execution_count="3">
+<div id="d5ede311" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">5</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>np.float64(0.3413447460685429)</code></pre>
@@ -282,42 +279,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="px-3-or-x-7" class="level1">
 <h1>3) P(X &lt; 3 or X &gt; 7)</h1>
-<div id="2aba4161" class="cell" data-execution_count="4">
+<div id="dfa772da" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="a값" class="level2">
-<h2 class="anchored" data-anchor-id="a값">a값</h2>
-<div id="2c3f20f9" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>np.float64(0.9986501019683699)</code></pre>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>) </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>np.float64(0.9986501019696498)</code></pre>
 </div>
 </div>
-</section>
-<section id="b값" class="level2">
-<h2 class="anchored" data-anchor-id="b값">b값</h2>
-<div id="599c1ff9" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>) </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>np.float64(1.2798651027878805e-12)</code></pre>
-</div>
-</div>
-</section>
 </section>
 <section id="q3." class="level1">
 <h1>Q3.</h1>
 <section id="ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다." class="level2">
-<h2 class="anchored" data-anchor-id="ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.">LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다.</h2>
+<h2 class="anchored" data-anchor-id="ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.">LS 빅데이터 스쿨 학생들의 중간고사 점수는 ’평균’이 30이고, ’분산’이 4인 정규분포를 따른다.</h2>
 </section>
 <section id="상위-5에-해당하는-학생의-점수는" class="level2">
 <h2 class="anchored" data-anchor-id="상위-5에-해당하는-학생의-점수는">상위 5%에 해당하는 학생의 점수는?</h2>
-<div id="76f1f51d" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>norm.ppf(<span class="fl">0.95</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>np.float64(36.579414507805886)</code></pre>
+<div id="0322bac7" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>norm.ppf(<span class="fl">0.95</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>np.float64(33.28970725390295)</code></pre>
 </div>
 </div>
 

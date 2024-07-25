@@ -20,17 +20,17 @@ import numpy as np
 import math 
 
 def pdf(x, mu, sig):
-    a = 1 / (sig * np.sqrt(2 * np.pi))
-    b = np.exp((-0.5 * ((x - mu) / sig)) ** 2 )
+    a = 1 / (sigma * np.sqrt(2 * np.pi))
+    b = (np.exp((-0.5 * ((x - mu) / sig)) ** 2 ))
     return a ** b 
 
 k=np.linspace(-2, 8, 100)
 y=norm.pdf(k, loc=3, scale=2)
+# 평균 3을 기준으로 양쪽으로 5씩 
 
 plt.plot(k, y, color="black")
 plt.show()
 plt.clf()
-
 
 ```
 
@@ -52,23 +52,12 @@ norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
 ```{python}
 a = norm.cdf(3, loc=0, scale=1)
 b = 1 - norm.cdf(7, loc=0, scale=1) 
-
+a+b
 ```
-## a값
-```{python}
-a = norm.cdf(3, loc=0, scale=1)
-a
-```
-## b값
-```{python}
-b = 1 - norm.cdf(7, loc=0, scale=1) 
-b
-```
-
 # Q3. 
-## LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다.
+## LS 빅데이터 스쿨 학생들의 중간고사 점수는 '평균'이 30이고, '분산'이 4인 정규분포를 따른다.
 ## 상위 5%에 해당하는 학생의 점수는?
 ```{python}
-norm.ppf(0.95, loc=30, scale=4)
+norm.ppf(0.95, loc=30, scale=2)
 ```
 
