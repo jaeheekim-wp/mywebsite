@@ -1,0 +1,57 @@
+---
+title: "LS 빅데이터 스쿨 HW4"
+author : "재희"
+date : "2024-07-29"
+categories : [bigdata]
+jupyter: python3
+---
+# 숙제 표본 분산 n-1 vs. n
+# 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+
+# Q1.
+
+## 균일분포 (3, 7)에서 20개의 표본 뽑기 (10000개 사용)
+```{python}
+from scipy.stats import bernoulli
+from scipy.stats import binom
+from scipy.stats import norm
+from scipy.stats import uniform
+
+import pandas as pd
+import numpy as np
+import math 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+x = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x
+```
+
+# Q2. 
+
+## n-1로 나눈 것을 s_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.
+```{python}
+s_2 = x.var(axis=1, ddof=1)
+s_2
+
+sns.histplot(s_2)
+plt.axvline(x.var(), color="green", linewidth = 2)
+plt.show()
+plt.clf()
+
+```
+## n로 나눈 것을 k_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.
+```{python}
+k_2 = x.var(axis=1, ddof=0)
+k_2
+
+sns.histplot(k_2)
+plt.axvline(x.var(), color="green", linewidth = 2)
+plt.show()
+plt.clf()
+```
+# Q3. 
+
+## n-1이 더 타당한 이유를 설명하기.
+n-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다. 

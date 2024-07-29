@@ -214,7 +214,7 @@
     "href": "blog.html",
     "title": "글 목록",
     "section": "",
-    "text": "LS 빅데이터 스쿨 HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\n계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 HW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\n계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/index.html#복사본-만들기",
@@ -453,5 +453,33 @@
     "title": "LS 빅데이터 스쿨 HW3",
     "section": "b값",
     "text": "b값\n\nb = 1 - norm.cdf(7, loc=0, scale=1) \nb\n\nnp.float64(1.2798651027878805e-12)"
+  },
+  {
+    "objectID": "posts/hw4/CopyOfhw3.html#균일분포-3-7에서-20개의-표본-뽑기-10000개-사용",
+    "href": "posts/hw4/CopyOfhw3.html#균일분포-3-7에서-20개의-표본-뽑기-10000개-사용",
+    "title": "LS 빅데이터 스쿨 HW4",
+    "section": "균일분포 (3, 7)에서 20개의 표본 뽑기 (10000개 사용)",
+    "text": "균일분포 (3, 7)에서 20개의 표본 뽑기 (10000개 사용)\n\nfrom scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\nfrom scipy.stats import uniform\n\nimport pandas as pd\nimport numpy as np\nimport math \nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n\narray([[5.22278088, 4.87372798, 3.21665093, ..., 5.58195461, 3.13627431,\n        3.74556694],\n       [3.54766903, 5.0385288 , 5.83495522, ..., 5.64344629, 6.76624894,\n        4.74250504],\n       [6.38976759, 3.10048692, 5.69694608, ..., 4.10308016, 3.98797257,\n        3.9864427 ],\n       ...,\n       [6.6007179 , 5.34435615, 6.14426837, ..., 5.30028789, 4.56947733,\n        5.42383309],\n       [5.48100618, 4.7887296 , 3.66897239, ..., 6.14648846, 6.37220993,\n        3.04450185],\n       [3.26631331, 4.45506691, 4.6206201 , ..., 6.77433261, 5.70999093,\n        4.75405309]])"
+  },
+  {
+    "objectID": "posts/hw4/CopyOfhw3.html#n-1로-나눈-것을-s_2-으로-정의하고-모분산-위치에-녹색-막대-추가하기.",
+    "href": "posts/hw4/CopyOfhw3.html#n-1로-나눈-것을-s_2-으로-정의하고-모분산-위치에-녹색-막대-추가하기.",
+    "title": "LS 빅데이터 스쿨 HW4",
+    "section": "n-1로 나눈 것을 s_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.",
+    "text": "n-1로 나눈 것을 s_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.\n\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\nsns.histplot(s_2)\nplt.axvline(x.var(), color=\"green\", linewidth = 2)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/CopyOfhw3.html#n로-나눈-것을-k_2-으로-정의하고-모분산-위치에-녹색-막대-추가하기.",
+    "href": "posts/hw4/CopyOfhw3.html#n로-나눈-것을-k_2-으로-정의하고-모분산-위치에-녹색-막대-추가하기.",
+    "title": "LS 빅데이터 스쿨 HW4",
+    "section": "n로 나눈 것을 k_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.",
+    "text": "n로 나눈 것을 k_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.\n\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\nsns.histplot(k_2)\nplt.axvline(x.var(), color=\"green\", linewidth = 2)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/CopyOfhw3.html#n-1이-더-타당한-이유를-설명하기.",
+    "href": "posts/hw4/CopyOfhw3.html#n-1이-더-타당한-이유를-설명하기.",
+    "title": "LS 빅데이터 스쿨 HW4",
+    "section": "n-1이 더 타당한 이유를 설명하기.",
+    "text": "n-1이 더 타당한 이유를 설명하기.\nn-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다."
   }
 ]
