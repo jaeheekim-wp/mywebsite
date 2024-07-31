@@ -2,8 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
+<<<<<<< HEAD
       "/posts/hw5/hw5.html",
       "/posts/hw4/hw4.html",
+=======
+      "/posts/hw4/CopyOfhw3.html",
+>>>>>>> 3b9180cfe95cd64ddcfa9c2e19526a050e41d564
       "/posts/hw3/hw3.html",
       "/posts/project1/fire_presentation.html",
       "/posts/hw3/textbook_chap8.html",

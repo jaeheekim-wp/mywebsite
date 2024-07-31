@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기." class="level1">
 <h1>해당 그래프에서 성별에 따른 95프로 신뢰 구간을 표시하기.</h1>
-<div id="05c08597" class="cell" data-execution_count="1">
+<div id="2c200091" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install pyreadstat</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -274,25 +274,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="신뢰구간-1" class="level1">
 <h1>신뢰구간 1</h1>
-<div id="0dc9f4f7" class="cell" data-execution_count="2">
+<div id="d605d2e2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>left <span class="op">=</span> norm.ppf(<span class="fl">0.025</span>, loc<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], scale<span class="op">=</span>(sex_income[<span class="st">'std_income'</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">'count_income'</span>])))</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>left</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>array([180.83045468, 340.1125923 ])</code></pre>
 </div>
 </div>
 </section>
 <section id="신뢰구간-2" class="level1">
 <h1>신뢰구간 2</h1>
-<div id="11baa640" class="cell" data-execution_count="3">
+<div id="f693f722" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>right <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], scale<span class="op">=</span>(sex_income[<span class="st">'std_income'</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">'count_income'</span>])))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>right</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>array([191.75573685, 357.96254968])</code></pre>
 </div>
 </div>

@@ -214,7 +214,11 @@
     "href": "blog.html",
     "title": "글 목록",
     "section": "",
+<<<<<<< HEAD
     "text": "LS 빅데이터 스쿨 HW5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\n계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
+=======
+    "text": "LS 빅데이터 스쿨 HW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\n계절별 화재발생 빈도 및 요인 분석\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 chap8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n재희\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 HW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\n재희\n\n\n\n\n\n\nNo matching items"
+>>>>>>> 3b9180cfe95cd64ddcfa9c2e19526a050e41d564
   },
   {
     "objectID": "posts/hw1/index.html#복사본-만들기",
@@ -481,6 +485,7 @@
     "title": "LS 빅데이터 스쿨 HW4",
     "section": "n-1이 더 타당한 이유를 설명하기.",
     "text": "n-1이 더 타당한 이유를 설명하기.\nn-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다."
+<<<<<<< HEAD
   },
   {
     "objectID": "posts/hw5/hw5.html",
@@ -516,5 +521,7 @@
     "title": "LS 빅데이터 스쿨 HW4",
     "section": "n-1이 더 타당한 이유를 설명하기.",
     "text": "n-1이 더 타당한 이유를 설명하기.\nn-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다."
+=======
+>>>>>>> 3b9180cfe95cd64ddcfa9c2e19526a050e41d564
   }
 ]
