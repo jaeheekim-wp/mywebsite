@@ -5,7 +5,7 @@ toc: false
 about: 
     id: hero-heading
     template: jolla
-    image: images.jfif
+    image: trumanshow.jfif
     links: 
       - icon: twitter
         text: twitter

@@ -1,0 +1,12 @@
+{
+  "hash": "6334cfc17be3f1c06db310ecf5ba5527",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: LS 빅데이터 스쿨 HW3\nauthor: 재희\ndate: '2024-07-25'\ncategories:\n  - bigdata\n---\n\n# Q1. \n## 정규분포 PDF 값을 계산하는 자신만의 함수 정의 및 정규분포 MU=3, SIGMA=2의 PDF 그리기\n\n::: {#e8e5ac82 .cell execution_count=1}\n``` {.python .cell-code}\nfrom scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\n\nimport pandas as pd\nimport numpy as np\nimport math \n\ndef pdf(x, mu, sig):\n    a = 1 / (sigma * np.sqrt(2 * np.pi))\n    b = (np.exp((-0.5 * ((x - mu) / sig)) ** 2 ))\n    return a ** b \n\nk=np.linspace(-2, 8, 100)\ny=norm.pdf(k, loc=3, scale=2)\n# 평균 3을 기준으로 양쪽으로 5씩 \n\nplt.plot(k, y, color=\"black\")\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw3_files/figure-html/cell-2-output-1.png){width=587 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n# Q2. \n## 파이썬 SCIPY 패키지 활용하여 다음 확률 구하기\n# X ~ N(2, 3^2)\n\n# 1) P(X < 3)\n\n::: {#271fa8fc .cell execution_count=2}\n``` {.python .cell-code}\nnorm.cdf(3, loc=2, scale=3)\n```\n\n::: {.cell-output .cell-output-display execution_count=2}\n```\nnp.float64(0.6305586598182363)\n```\n:::\n:::\n\n\n# 2) P(2 < X < 5)\n\n::: {#d5ede311 .cell execution_count=3}\n``` {.python .cell-code}\nnorm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\nnp.float64(0.3413447460685429)\n```\n:::\n:::\n\n\n# 3) P(X < 3 or X > 7)\n\n::: {#dfa772da .cell execution_count=4}\n``` {.python .cell-code}\na = norm.cdf(3, loc=0, scale=1)\nb = 1 - norm.cdf(7, loc=0, scale=1) \na+b\n```\n\n::: {.cell-output .cell-output-display execution_count=4}\n```\nnp.float64(0.9986501019696498)\n```\n:::\n:::\n\n\n# Q3. \n## LS 빅데이터 스쿨 학생들의 중간고사 점수는 '평균'이 30이고, '분산'이 4인 정규분포를 따른다.\n## 상위 5%에 해당하는 학생의 점수는?\n\n::: {#0322bac7 .cell execution_count=5}\n``` {.python .cell-code}\nnorm.ppf(0.95, loc=30, scale=2)\n```\n\n::: {.cell-output .cell-output-display execution_count=5}\n```\nnp.float64(33.28970725390295)\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "hw3_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "hash": "8c04c3c6cd6b71a0fc796878082e7d75",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: LS 빅데이터 스쿨 HW4\nauthor: 재희\ndate: '2024-07-29'\ncategories:\n  - bigdata\n---\n\n# 숙제 표본 분산 n-1 vs. n\n# 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.\n\n# Q1.\n\n## 균일분포 (3, 7)에서 20개의 표본 뽑기 (10000개 사용)\n\n::: {#f81473ae .cell execution_count=1}\n``` {.python .cell-code}\nfrom scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\nfrom scipy.stats import uniform\n\nimport pandas as pd\nimport numpy as np\nimport math \nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n\nx = uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\narray([[3.37604017, 3.79090658, 5.83565754, ..., 3.63569777, 4.75587272,\n        6.67150991],\n       [5.44653805, 5.84379075, 5.70070774, ..., 4.59885491, 6.42574126,\n        4.56374969],\n       [3.08882311, 4.30682932, 3.21956397, ..., 3.68146238, 5.35755291,\n        3.62936436],\n       ...,\n       [4.52464818, 6.57343197, 6.00309659, ..., 5.87671416, 3.70453815,\n        6.42879896],\n       [4.09026464, 4.65204737, 5.66357595, ..., 6.57972128, 4.28337911,\n        3.05461659],\n       [4.70290102, 5.06360951, 6.27355809, ..., 6.69966382, 4.85084055,\n        4.93457127]])\n```\n:::\n:::\n\n\n# Q2. \n\n## n-1로 나눈 것을 s_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.\n\n::: {#594e0ad7 .cell execution_count=2}\n``` {.python .cell-code}\ns_2 = x.var(axis=1, ddof=1)\ns_2\n\nsns.histplot(s_2)\nplt.axvline(x.var(), color=\"green\", linewidth = 2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_files/figure-html/cell-3-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n## n로 나눈 것을 k_2 으로 정의하고 모분산 위치에 녹색 막대 추가하기.\n\n::: {#904bd1e7 .cell execution_count=3}\n``` {.python .cell-code}\nk_2 = x.var(axis=1, ddof=0)\nk_2\n\nsns.histplot(k_2)\nplt.axvline(x.var(), color=\"green\", linewidth = 2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_files/figure-html/cell-4-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n# Q3. \n\n## n-1이 더 타당한 이유를 설명하기.\nn-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다. \n\n",
+    "supporting": [
+      "hw4_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

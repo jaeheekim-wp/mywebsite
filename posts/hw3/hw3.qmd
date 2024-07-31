@@ -1,0 +1,63 @@
+---
+title: "LS 빅데이터 스쿨 HW3"
+author : "재희"
+date : "2024-07-25"
+categories : [bigdata]
+jupyter: python3
+---
+# Q1. 
+## 정규분포 PDF 값을 계산하는 자신만의 함수 정의 및 정규분포 MU=3, SIGMA=2의 PDF 그리기
+
+```{python}
+from scipy.stats import bernoulli
+from scipy.stats import binom
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+
+
+import pandas as pd
+import numpy as np
+import math 
+
+def pdf(x, mu, sig):
+    a = 1 / (sigma * np.sqrt(2 * np.pi))
+    b = (np.exp((-0.5 * ((x - mu) / sig)) ** 2 ))
+    return a ** b 
+
+k=np.linspace(-2, 8, 100)
+y=norm.pdf(k, loc=3, scale=2)
+# 평균 3을 기준으로 양쪽으로 5씩 
+
+plt.plot(k, y, color="black")
+plt.show()
+plt.clf()
+
+```
+
+# Q2. 
+## 파이썬 SCIPY 패키지 활용하여 다음 확률 구하기
+# X ~ N(2, 3^2)
+
+# 1) P(X < 3)
+```{python}
+norm.cdf(3, loc=2, scale=3)
+```
+
+# 2) P(2 < X < 5)
+```{python}
+norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
+```
+
+# 3) P(X < 3 or X > 7)
+```{python}
+a = norm.cdf(3, loc=0, scale=1)
+b = 1 - norm.cdf(7, loc=0, scale=1) 
+a+b
+```
+# Q3. 
+## LS 빅데이터 스쿨 학생들의 중간고사 점수는 '평균'이 30이고, '분산'이 4인 정규분포를 따른다.
+## 상위 5%에 해당하는 학생의 점수는?
+```{python}
+norm.ppf(0.95, loc=30, scale=2)
+```
+

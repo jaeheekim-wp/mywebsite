@@ -1,0 +1,96 @@
+---
+title: "LS 빅데이터 스쿨 HW5"
+author : "재희"
+date : "2024-07-30"
+categories : [bigdata]
+jupyter: python3
+---
+# 해당 그래프에서 성별에 따른  95프로 신뢰 구간을 표시하기.
+```{python}
+# !pip install pyreadstat
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+raw_welfare = pd.read_spss("../../data/plz/Koweps_hpwc14_2019_beta2.sav")
+raw_welfare 
+
+welfare =  raw_welfare.copy()
+welfare 
+
+# 변수명 변경 
+welfare = welfare.rename(columns = {
+        "h14_g3" : "sex",
+        "h14_g4" : "birth",
+        "h14_g10": "marriage_type",
+        "h14_g11": "religion",
+        "p1402_8aq1" : "income",
+        "h14_eco9" : "code_job",
+        "h14_reg7" : "code_region"})
+welfare
+
+welfare = welfare[["sex", "birth","marriage_type","religion","income","code_job","code_region"]]
+
+# 변수 검토 
+welfare['sex'].dtypes
+welfare['sex'].value_counts()
+# welfare['sex'].isna().sum()
+
+
+welfare['sex'] = np.where(welfare["sex"] == 1,'male','female')
+welfare['sex']
+
+# 월급 변수 
+welfare["income"].describe()
+welfare['income'].isna().sum()
+
+# 
+sum(welfare["income"] > 9998)
+
+
+sex_income = welfare.dropna(subset = 'income') \
+                    .groupby('sex', as_index = False) \
+                    .agg(mean_income = ('income', 'mean'),
+                         std_income=('income', 'std'),
+                         count_income=('income', 'count'))
+sex_income  
+
+
+# 그래프
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.barplot(data = sex_income, x = "sex",y = "mean_income",\
+            hue = "sex")
+plt.show()
+plt.clf()
+
+```
+
+# 신뢰구간 1
+
+```{python}
+from scipy.stats import norm
+
+
+left = norm.ppf(0.025, loc=sex_income['mean_income'], scale=(sex_income['std_income'] / np.sqrt(sex_income['count_income'])))
+
+left
+```
+# 신뢰구간 2
+```{python}
+
+right = norm.ppf(0.975, loc=sex_income['mean_income'], scale=(sex_income['std_income'] / np.sqrt(sex_income['count_income'])))
+
+right
+```
+# 그래프 
+```{python}
+import seaborn as sns
+
+plt.bar(sex_income, yerr = [left, right], alpha = 0.4)
+plt.show()
+
