@@ -14,83 +14,99 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-raw_welfare = pd.read_spss("../../data/plz/Koweps_hpwc14_2019_beta2.sav")
-raw_welfare 
+raw_welfare=pd.read_spss("C:/Users/USER/Documents/LS 빅데이터스쿨/mywebsite/data/plz/Koweps_hpwc14_2019_beta2.sav")
+raw_welfare
 
-welfare =  raw_welfare.copy()
-welfare 
+welfare=raw_welfare.copy()
+welfare.shape
+welfare.describe()
 
 # 변수명 변경 
-welfare = welfare.rename(columns = {
-        "h14_g3" : "sex",
-        "h14_g4" : "birth",
+welfare=welfare.rename(
+    columns = {
+        "h14_g3": "sex",
+        "h14_g4": "birth",
         "h14_g10": "marriage_type",
         "h14_g11": "religion",
-        "p1402_8aq1" : "income",
-        "h14_eco9" : "code_job",
-        "h14_reg7" : "code_region"})
-welfare
-
-welfare = welfare[["sex", "birth","marriage_type","religion","income","code_job","code_region"]]
-
-# 변수 검토 
-welfare['sex'].dtypes
-welfare['sex'].value_counts()
-# welfare['sex'].isna().sum()
+        "p1402_8aq1": "income",
+        "h14_eco9": "code_job",
+        "h14_reg7": "code_region"
+    })
 
 
-welfare['sex'] = np.where(welfare["sex"] == 1,'male','female')
-welfare['sex']
+welfare=welfare[["sex", "birth", "marriage_type",
+                "religion", "income", "code_job", "code_region"]]
+welfare.shape
 
-# 월급 변수 
-welfare["income"].describe()
-welfare['income'].isna().sum()
+# 변수 검토
+welfare["sex"].dtypes
+welfare["sex"].value_counts()
+# welfare["sex"].isna().sum()
 
-# 
-sum(welfare["income"] > 9998)
+# 성별 항목 이름 부여 
+welfare["sex"] = np.where(welfare["sex"] == 1,'male', 'female')
+# 빈도 구하기 
+welfare["sex"].value_counts()
 
+# income
 
-sex_income = welfare.dropna(subset = 'income') \
-                    .groupby('sex', as_index = False) \
-                    .agg(mean_income = ('income', 'mean'),
-                         std_income=('income', 'std'),
-                         count_income=('income', 'count'))
-sex_income  
+# welfare["income"].describe()
+welfare["income"].value_counts()
+welfare["income"].isna().sum()
 
+# 성별 월급 평균표 구하기 
+sex_income = welfare.dropna(subset="income") \
+                  .groupby("sex", as_index=False) \
+                  .agg(mean_income = ("income", "mean"))
 
-# 그래프
+sex_income
 
-import seaborn as sns
-import matplotlib.pyplot as plt
+# 막대 그래프화 
 
-sns.barplot(data = sex_income, x = "sex",y = "mean_income",\
-            hue = "sex")
+sns.barplot(data=sex_income, x="sex", y="mean_income",
+            hue="sex")
 plt.show()
 plt.clf()
 
 ```
 
-# 신뢰구간 1
+# 표본평균, 표준편차 구하기 ( groupby+agg로 변수 추가)
 
 ```{python}
 from scipy.stats import norm
 
+sex_income = welfare.dropna(subset="income") \
+                  .groupby("sex", as_index=False) \
+                  .agg(mean_income = ("income", "mean"),\
+                       std_income = ("income", "std"),\
+                       count_income = ("income", "count"))
 
-left = norm.ppf(0.025, loc=sex_income['mean_income'], scale=(sex_income['std_income'] / np.sqrt(sex_income['count_income'])))
-
-left
+sex_income
 ```
-# 신뢰구간 2
+# 성별 간 신뢰구간 변수 추가하기 
 ```{python}
 
-right = norm.ppf(0.975, loc=sex_income['mean_income'], scale=(sex_income['std_income'] / np.sqrt(sex_income['count_income'])))
+# mean +(-) 1.96 * std/sqrt(n) 
 
-right
+sex_income["left_ci"] = sex_income["mean_income"] - 1.96 * sex_income["std_income"] / np.sqrt(sex_income["count_income"])
+sex_income["right_ci"] = sex_income["mean_income"] + 1.96 * sex_income["std_income"] / np.sqrt(sex_income["count_income"])
+sex_income
+
+# 1.96 = norm.ppf(0.975, loc=0, scale=1)
+# selected_columns = ['sex','left_ci', 'right_ci']
+# sex_income_ci = sex_income[selected_columns]
+# sex_income_ci
 ```
-# 그래프 
+# 그래프 만들기
 ```{python}
-import seaborn as sns
 
-plt.bar(sex_income, yerr = [left, right], alpha = 0.4)
+sns.barplot(data=sex_income,x="sex",y="mean_income",hue='sex')
+plt.plot([0, 0], [sex_income.iloc[0]["left_ci"], sex_income.iloc[0]["right_ci"]], color='red', linewidth=2)
+plt.plot([1, 1], [sex_income.iloc[1]["left_ci"], sex_income.iloc[1]["right_ci"]], color='blue', linewidth=2)
 plt.show()
+plt.clf()
+
+```
+
+
 

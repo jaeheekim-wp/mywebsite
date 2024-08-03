@@ -59,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -102,6 +102,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -184,9 +190,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기." id="toc-해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기." class="nav-link active" data-scroll-target="#해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기.">해당 그래프에서 성별에 따른 95프로 신뢰 구간을 표시하기.</a></li>
-  <li><a href="#신뢰구간-1" id="toc-신뢰구간-1" class="nav-link" data-scroll-target="#신뢰구간-1">신뢰구간 1</a></li>
-  <li><a href="#신뢰구간-2" id="toc-신뢰구간-2" class="nav-link" data-scroll-target="#신뢰구간-2">신뢰구간 2</a></li>
-  <li><a href="#그래프" id="toc-그래프" class="nav-link" data-scroll-target="#그래프">그래프</a></li>
+  <li><a href="#표본평균-표준편차-구하기-groupbyagg로-변수-추가" id="toc-표본평균-표준편차-구하기-groupbyagg로-변수-추가" class="nav-link" data-scroll-target="#표본평균-표준편차-구하기-groupbyagg로-변수-추가">표본평균, 표준편차 구하기 ( groupby+agg로 변수 추가)</a></li>
+  <li><a href="#성별-간-신뢰구간-변수-추가하기" id="toc-성별-간-신뢰구간-변수-추가하기" class="nav-link" data-scroll-target="#성별-간-신뢰구간-변수-추가하기">성별 간 신뢰구간 변수 추가하기</a></li>
+  <li><a href="#그래프-만들기" id="toc-그래프-만들기" class="nav-link" data-scroll-target="#그래프-만들기">그래프 만들기</a></li>
   </ul>
 </nav>
     </div>
@@ -199,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기." class="level1">
 <h1>해당 그래프에서 성별에 따른 95프로 신뢰 구간을 표시하기.</h1>
-<div id="2c200091" class="cell" data-execution_count="1">
+<div id="0870630b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install pyreadstat</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -207,57 +213,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>raw_welfare <span class="op">=</span> pd.read_spss(<span class="st">"../../data/plz/Koweps_hpwc14_2019_beta2.sav"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>raw_welfare </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>raw_welfare<span class="op">=</span>pd.read_spss(<span class="st">"C:/Users/USER/Documents/LS 빅데이터스쿨/mywebsite/data/plz/Koweps_hpwc14_2019_beta2.sav"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>raw_welfare</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span>  raw_welfare.copy()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>welfare </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 변수명 변경 </span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare.rename(columns <span class="op">=</span> {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g3"</span> : <span class="st">"sex"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g4"</span> : <span class="st">"birth"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g10"</span>: <span class="st">"marriage_type"</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g11"</span>: <span class="st">"religion"</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"p1402_8aq1"</span> : <span class="st">"income"</span>,</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_eco9"</span> : <span class="st">"code_job"</span>,</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_reg7"</span> : <span class="st">"code_region"</span>})</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>welfare</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare[[<span class="st">"sex"</span>, <span class="st">"birth"</span>,<span class="st">"marriage_type"</span>,<span class="st">"religion"</span>,<span class="st">"income"</span>,<span class="st">"code_job"</span>,<span class="st">"code_region"</span>]]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>welfare<span class="op">=</span>raw_welfare.copy()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>welfare.shape</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>welfare.describe()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 변수명 변경 </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>welfare<span class="op">=</span>welfare.rename(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g3"</span>: <span class="st">"sex"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g4"</span>: <span class="st">"birth"</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g10"</span>: <span class="st">"marriage_type"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_g11"</span>: <span class="st">"religion"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"p1402_8aq1"</span>: <span class="st">"income"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_eco9"</span>: <span class="st">"code_job"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">"h14_reg7"</span>: <span class="st">"code_region"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    })</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 변수 검토 </span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>].dtypes</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>].value_counts()</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># welfare['sex'].isna().sum()</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>welfare<span class="op">=</span>welfare[[<span class="st">"sex"</span>, <span class="st">"birth"</span>, <span class="st">"marriage_type"</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                <span class="st">"religion"</span>, <span class="st">"income"</span>, <span class="st">"code_job"</span>, <span class="st">"code_region"</span>]]</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>welfare.shape</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>] <span class="op">=</span> np.where(welfare[<span class="st">"sex"</span>] <span class="op">==</span> <span class="dv">1</span>,<span class="st">'male'</span>,<span class="st">'female'</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>]</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># 월급 변수 </span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"income"</span>].describe()</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'income'</span>].isna().<span class="bu">sum</span>()</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(welfare[<span class="st">"income"</span>] <span class="op">&gt;</span> <span class="dv">9998</span>)</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 변수 검토</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"sex"</span>].dtypes</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"sex"</span>].value_counts()</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># welfare["sex"].isna().sum()</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 성별 항목 이름 부여 </span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"sex"</span>] <span class="op">=</span> np.where(welfare[<span class="st">"sex"</span>] <span class="op">==</span> <span class="dv">1</span>,<span class="st">'male'</span>, <span class="st">'female'</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co"># 빈도 구하기 </span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"sex"</span>].value_counts()</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># income</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>) <span class="op">\</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>                    .groupby(<span class="st">'sex'</span>, as_index <span class="op">=</span> <span class="va">False</span>) <span class="op">\</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>                    .agg(mean_income <span class="op">=</span> (<span class="st">'income'</span>, <span class="st">'mean'</span>),</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                         std_income<span class="op">=</span>(<span class="st">'income'</span>, <span class="st">'std'</span>),</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>                         count_income<span class="op">=</span>(<span class="st">'income'</span>, <span class="st">'count'</span>))</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>sex_income  </span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co"># 그래프</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># welfare["income"].describe()</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"income"</span>].value_counts()</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">"income"</span>].isna().<span class="bu">sum</span>()</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># 성별 월급 평균표 구하기 </span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>) <span class="op">\</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                  .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>) <span class="op">\</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                  .agg(mean_income <span class="op">=</span> (<span class="st">"income"</span>, <span class="st">"mean"</span>))</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>sex_income</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co"># 막대 그래프화 </span></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> sex_income, x <span class="op">=</span> <span class="st">"sex"</span>,y <span class="op">=</span> <span class="st">"mean_income"</span>,<span class="op">\</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>            hue <span class="op">=</span> <span class="st">"sex"</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income, x<span class="op">=</span><span class="st">"sex"</span>, y<span class="op">=</span><span class="st">"mean_income"</span>,</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>            hue<span class="op">=</span><span class="st">"sex"</span>)</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -272,35 +278,128 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="신뢰구간-1" class="level1">
-<h1>신뢰구간 1</h1>
-<div id="d605d2e2" class="cell" data-execution_count="2">
+<section id="표본평균-표준편차-구하기-groupbyagg로-변수-추가" class="level1">
+<h1>표본평균, 표준편차 구하기 ( groupby+agg로 변수 추가)</h1>
+<div id="7cc24479" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>left <span class="op">=</span> norm.ppf(<span class="fl">0.025</span>, loc<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], scale<span class="op">=</span>(sex_income[<span class="st">'std_income'</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">'count_income'</span>])))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>left</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>array([180.83045468, 340.1125923 ])</code></pre>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>) <span class="op">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                  .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>) <span class="op">\</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                  .agg(mean_income <span class="op">=</span> (<span class="st">"income"</span>, <span class="st">"mean"</span>),<span class="op">\</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                       std_income <span class="op">=</span> (<span class="st">"income"</span>, <span class="st">"std"</span>),<span class="op">\</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                       count_income <span class="op">=</span> (<span class="st">"income"</span>, <span class="st">"count"</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>sex_income</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">mean_income</th>
+<th data-quarto-table-cell-role="th">std_income</th>
+<th data-quarto-table-cell-role="th">count_income</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>female</td>
+<td>186.293096</td>
+<td>132.057402</td>
+<td>2245</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>male</td>
+<td>349.037571</td>
+<td>217.862254</td>
+<td>2289</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 </section>
-<section id="신뢰구간-2" class="level1">
-<h1>신뢰구간 2</h1>
-<div id="f693f722" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>right <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc<span class="op">=</span>sex_income[<span class="st">'mean_income'</span>], scale<span class="op">=</span>(sex_income[<span class="st">'std_income'</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">'count_income'</span>])))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>right</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>array([191.75573685, 357.96254968])</code></pre>
+<section id="성별-간-신뢰구간-변수-추가하기" class="level1">
+<h1>성별 간 신뢰구간 변수 추가하기</h1>
+<div id="05d4ad06" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean +(-) 1.96 * std/sqrt(n) </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sex_income[<span class="st">"left_ci"</span>] <span class="op">=</span> sex_income[<span class="st">"mean_income"</span>] <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> sex_income[<span class="st">"std_income"</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">"count_income"</span>])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sex_income[<span class="st">"right_ci"</span>] <span class="op">=</span> sex_income[<span class="st">"mean_income"</span>] <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> sex_income[<span class="st">"std_income"</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">"count_income"</span>])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>sex_income</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.96 = norm.ppf(0.975, loc=0, scale=1)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># selected_columns = ['sex','left_ci', 'right_ci']</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income_ci = sex_income[selected_columns]</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># sex_income_ci</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">mean_income</th>
+<th data-quarto-table-cell-role="th">std_income</th>
+<th data-quarto-table-cell-role="th">count_income</th>
+<th data-quarto-table-cell-role="th">left_ci</th>
+<th data-quarto-table-cell-role="th">right_ci</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>female</td>
+<td>186.293096</td>
+<td>132.057402</td>
+<td>2245</td>
+<td>180.830354</td>
+<td>191.755837</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>male</td>
+<td>349.037571</td>
+<td>217.862254</td>
+<td>2289</td>
+<td>340.112428</td>
+<td>357.962714</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 </section>
-<section id="그래프" class="level1">
-<h1>그래프</h1>
-<p>import seaborn as sns</p>
-<p>plt.bar(sex_income, yerr = [left, right], alpha = 0.4) plt.show()</p>
+<section id="그래프-만들기" class="level1">
+<h1>그래프 만들기</h1>
+<div id="f8f33479" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income,x<span class="op">=</span><span class="st">"sex"</span>,y<span class="op">=</span><span class="st">"mean_income"</span>,hue<span class="op">=</span><span class="st">'sex'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">0</span>], [sex_income.iloc[<span class="dv">0</span>][<span class="st">"left_ci"</span>], sex_income.iloc[<span class="dv">0</span>][<span class="st">"right_ci"</span>]], color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">1</span>], [sex_income.iloc[<span class="dv">1</span>][<span class="st">"left_ci"</span>], sex_income.iloc[<span class="dv">1</span>][<span class="st">"right_ci"</span>]], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw5_files/figure-html/cell-5-output-1.png" width="593" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
 
 
 </section>
