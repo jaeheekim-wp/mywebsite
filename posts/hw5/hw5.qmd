@@ -5,8 +5,10 @@ date : "2024-07-30"
 categories : [bigdata]
 jupyter: python3
 ---
+
 # 해당 그래프에서 성별에 따른  95프로 신뢰 구간을 표시하기.
 ```{python}
+
 # !pip install pyreadstat
 import numpy as np
 import pandas as pd
@@ -107,6 +109,3 @@ plt.show()
 plt.clf()
 
 ```
-
-
-

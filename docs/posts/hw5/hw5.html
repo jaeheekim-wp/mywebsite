@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="해당-그래프에서-성별에-따른-95프로-신뢰-구간을-표시하기." class="level1">
 <h1>해당 그래프에서 성별에 따른 95프로 신뢰 구간을 표시하기.</h1>
-<div id="0870630b" class="cell" data-execution_count="1">
+<div id="67b7dfe2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install pyreadstat</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -280,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="표본평균-표준편차-구하기-groupbyagg로-변수-추가" class="level1">
 <h1>표본평균, 표준편차 구하기 ( groupby+agg로 변수 추가)</h1>
-<div id="7cc24479" class="cell" data-execution_count="2">
+<div id="df1f4fcb" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset<span class="op">=</span><span class="st">"income"</span>) <span class="op">\</span></span>
@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="성별-간-신뢰구간-변수-추가하기" class="level1">
 <h1>성별 간 신뢰구간 변수 추가하기</h1>
-<div id="05d4ad06" class="cell" data-execution_count="3">
+<div id="81f9dd28" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean +(-) 1.96 * std/sqrt(n) </span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sex_income[<span class="st">"left_ci"</span>] <span class="op">=</span> sex_income[<span class="st">"mean_income"</span>] <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> sex_income[<span class="st">"std_income"</span>] <span class="op">/</span> np.sqrt(sex_income[<span class="st">"count_income"</span>])</span>
@@ -383,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="그래프-만들기" class="level1">
 <h1>그래프 만들기</h1>
-<div id="f8f33479" class="cell" data-execution_count="4">
+<div id="7a922729" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>sex_income,x<span class="op">=</span><span class="st">"sex"</span>,y<span class="op">=</span><span class="st">"mean_income"</span>,hue<span class="op">=</span><span class="st">'sex'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">0</span>], [sex_income.iloc[<span class="dv">0</span>][<span class="st">"left_ci"</span>], sex_income.iloc[<span class="dv">0</span>][<span class="st">"right_ci"</span>]], color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">1</span>], [sex_income.iloc[<span class="dv">1</span>][<span class="st">"left_ci"</span>], sex_income.iloc[<span class="dv">1</span>][<span class="st">"right_ci"</span>]], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
