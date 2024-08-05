@@ -1,5 +1,5 @@
 ---
-title: "LS 빅데이터 스쿨 HW5"
+title: "LS 빅데이터 스쿨 HW6"
 author : "재희"
 date : "2024-08-05"
 categories : [bigdata]
