@@ -6,11 +6,11 @@ website:
   title: "jaehee"
   navbar:
     left:
-      - href: index.qmdtext: Home
+      - href: index.qmd
         text: Home
-      - href: about.qmdtext: About
+      - href: about.qmd
         text: About
-      - href: post/index.qmd
+      - href: blog.qmd
         text: Blog
 format:
   html:
