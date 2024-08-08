@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,7 +128,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -157,7 +156,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./post/index.qmd"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -200,85 +199,73 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1723077445623" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/index.html" class="no-external">Recent posts</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/index.html" class="no-external">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1723077445623" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<a href="./posts/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw5\hw5_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Recent posts
+</h5>
+<div class="card-text listing-description">
 
+
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="metadata">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bigdata" data-listing-date-sort="1722783600000" data-listing-file-modified-sort="1722900664272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
-<div class="thumbnail">
-<p><a href="./posts/hw6/hw6.html" class="no-external"></a></p><a href="./posts/hw6/hw6.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw6/hw6.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw6/hw6.html" class="no-external">LS 빅데이터 스쿨 HW6</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw6/hw6.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="1" data-categories="bigdata" data-listing-date-sort="1722783600000" data-listing-file-modified-sort="1722900664272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<a href="./posts/hw6/hw6.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW6
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw6/hw6.html" class="no-external">슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고…</a>
+<div class="card-text listing-description">
+슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고…
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/hw6/hw6.html" class="no-external">
-<div class="listing-date">
-Aug 5, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 재희
 </div>
+<div class="listing-date">
+Aug 5, 2024
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bigdata" data-listing-date-sort="1722265200000" data-listing-file-modified-sort="1722705415930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="357">
-<div class="thumbnail">
-<p><a href="./posts/hw5/hw5.html" class="no-external"></a></p><a href="./posts/hw5/hw5.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw5\hw5_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw5/hw5.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw5/hw5.html" class="no-external">LS 빅데이터 스쿨 HW5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw5/hw5.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="2" data-categories="bigdata" data-listing-date-sort="1722265200000" data-listing-file-modified-sort="1722705415930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="357">
+<a href="./posts/hw5/hw5.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw5\hw5_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW5
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw5/hw5.html" class="no-external">
+<div class="card-text listing-description">
+
 
 <div id="67b7dfe2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co"># !pip install pyreadstat</span></span>
@@ -288,106 +275,91 @@ bigdata
 <span id="cb1-5"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-6"></span>
 <span id="cb1-7"></span>
-<span id="cb1-8">raw_welfare<span class="op">=</span>pd.read_spss(<span class="st">"C:/Users/USER/Documents…</span></span><span id="cb1-9"></span><span id="cb1-10"></span><span id="cb1-11"><span class="op"></span></span><span id="cb1-12"></span><span id="cb1-13"></span><span id="cb1-14"></span><span id="cb1-15"><span class="co"></span></span><span id="cb1-16"><span class="op"></span></span><span id="cb1-17"><span class="op"></span></span><span id="cb1-18"><span class="st"></span><span class="st"></span></span><span id="cb1-19"><span class="st"></span><span class="st"></span></span><span id="cb1-20"><span class="st"></span><span class="st"></span></span><span id="cb1-21"><span class="st"></span><span class="st"></span></span><span id="cb1-22"><span class="st"></span><span class="st"></span></span><span id="cb1-23"><span class="st"></span><span class="st"></span></span><span id="cb1-24"><span class="st"></span><span class="st"></span></span><span id="cb1-25"></span><span id="cb1-26"></span><span id="cb1-27"></span><span id="cb1-28"><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb1-29"><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb1-30"></span><span id="cb1-31"></span><span id="cb1-32"><span class="co"></span></span><span id="cb1-33"><span class="st"></span></span><span id="cb1-34"><span class="st"></span></span><span id="cb1-35"><span class="co"></span></span><span id="cb1-36"></span><span id="cb1-37"><span class="co"></span></span><span id="cb1-38"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span><span class="st"></span><span class="st"></span></span><span id="cb1-39"><span class="co"></span></span><span id="cb1-40"><span class="st"></span></span><span id="cb1-41"></span><span id="cb1-42"><span class="co"></span></span><span id="cb1-43"></span><span id="cb1-44"><span class="co"></span></span><span id="cb1-45"><span class="st"></span></span><span id="cb1-46"><span class="st"></span><span class="bu"></span></span><span id="cb1-47"></span><span id="cb1-48"><span class="co"></span></span><span id="cb1-49"><span class="op"></span><span class="op"></span><span class="st"></span><span class="op"></span></span><span id="cb1-50"><span class="st"></span><span class="op"></span><span class="va"></span><span class="op"></span></span><span id="cb1-51"><span class="op"></span><span class="st"></span><span class="st"></span></span><span id="cb1-52"></span><span id="cb1-53"></span><span id="cb1-54"></span><span id="cb1-55"><span class="co"></span></span><span id="cb1-56"></span><span id="cb1-57"><span class="op"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-58"><span class="op"></span><span class="st"></span></span><span id="cb1-59"></span><span id="cb1-60"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></a>
+<span id="cb1-8">raw_welfare<span class="op">=</span>pd.read_spss(<span class="st">"C:/Users/USER/Documents…</span></span><span id="cb1-9"></span><span id="cb1-10"></span><span id="cb1-11"><span class="op"></span></span><span id="cb1-12"></span><span id="cb1-13"></span><span id="cb1-14"></span><span id="cb1-15"><span class="co"></span></span><span id="cb1-16"><span class="op"></span></span><span id="cb1-17"><span class="op"></span></span><span id="cb1-18"><span class="st"></span><span class="st"></span></span><span id="cb1-19"><span class="st"></span><span class="st"></span></span><span id="cb1-20"><span class="st"></span><span class="st"></span></span><span id="cb1-21"><span class="st"></span><span class="st"></span></span><span id="cb1-22"><span class="st"></span><span class="st"></span></span><span id="cb1-23"><span class="st"></span><span class="st"></span></span><span id="cb1-24"><span class="st"></span><span class="st"></span></span><span id="cb1-25"></span><span id="cb1-26"></span><span id="cb1-27"></span><span id="cb1-28"><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb1-29"><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb1-30"></span><span id="cb1-31"></span><span id="cb1-32"><span class="co"></span></span><span id="cb1-33"><span class="st"></span></span><span id="cb1-34"><span class="st"></span></span><span id="cb1-35"><span class="co"></span></span><span id="cb1-36"></span><span id="cb1-37"><span class="co"></span></span><span id="cb1-38"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span><span class="st"></span><span class="st"></span></span><span id="cb1-39"><span class="co"></span></span><span id="cb1-40"><span class="st"></span></span><span id="cb1-41"></span><span id="cb1-42"><span class="co"></span></span><span id="cb1-43"></span><span id="cb1-44"><span class="co"></span></span><span id="cb1-45"><span class="st"></span></span><span id="cb1-46"><span class="st"></span><span class="bu"></span></span><span id="cb1-47"></span><span id="cb1-48"><span class="co"></span></span><span id="cb1-49"><span class="op"></span><span class="op"></span><span class="st"></span><span class="op"></span></span><span id="cb1-50"><span class="st"></span><span class="op"></span><span class="va"></span><span class="op"></span></span><span id="cb1-51"><span class="op"></span><span class="st"></span><span class="st"></span></span><span id="cb1-52"></span><span id="cb1-53"></span><span id="cb1-54"></span><span id="cb1-55"><span class="co"></span></span><span id="cb1-56"></span><span id="cb1-57"><span class="op"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-58"><span class="op"></span><span class="st"></span></span><span id="cb1-59"></span><span id="cb1-60"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div>
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+재희
 </div>
-<div class="metadata">
-<a href="./posts/hw5/hw5.html" class="no-external">
 <div class="listing-date">
 Jul 30, 2024
 </div>
-<div class="listing-author">
-재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bigdata" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722391896907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
-<div class="thumbnail">
-<p><a href="./posts/hw4/CopyOfhw3.html" class="no-external"></a></p><a href="./posts/hw4/CopyOfhw3.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw4\CopyOfhw3_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw4/CopyOfhw3.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw4/CopyOfhw3.html" class="no-external">LS 빅데이터 스쿨 HW4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw4/CopyOfhw3.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="3" data-categories="bigdata" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722391896907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
+<a href="./posts/hw4/CopyOfhw3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw4\CopyOfhw3_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW4
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw4/CopyOfhw3.html" class="no-external">n-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다.</a>
+<div class="card-text listing-description">
+n-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+재희
 </div>
-<div class="metadata">
-<a href="./posts/hw4/CopyOfhw3.html" class="no-external">
 <div class="listing-date">
 Jul 29, 2024
 </div>
-<div class="listing-author">
-재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bigdata" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722267801250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
-<div class="thumbnail">
-<p><a href="./posts/hw4/hw4.html" class="no-external"></a></p><a href="./posts/hw4/hw4.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw4\hw4_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw4/hw4.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw4/hw4.html" class="no-external">LS 빅데이터 스쿨 HW4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw4/hw4.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="4" data-categories="bigdata" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722267801250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
+<a href="./posts/hw4/hw4.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw4\hw4_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW4
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw4/hw4.html" class="no-external">n-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다.</a>
+<div class="card-text listing-description">
+n-1로 나눈 그래프가 모분산에 더 근접한 결과를 보인다.
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+재희
 </div>
-<div class="metadata">
-<a href="./posts/hw4/hw4.html" class="no-external">
 <div class="listing-date">
 Jul 29, 2024
 </div>
-<div class="listing-author">
-재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="bigdata" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721950204674" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
-<div class="thumbnail">
-<p><a href="./posts/hw3/hw3.html" class="no-external"></a></p><a href="./posts/hw3/hw3.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw3\hw3_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw3/hw3.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw3/hw3.html" class="no-external">LS 빅데이터 스쿨 HW3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw3/hw3.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="5" data-categories="bigdata" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721950204674" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
+<a href="./posts/hw3/hw3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw3\hw3_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW3
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw3/hw3.html" class="no-external">
+<div class="card-text listing-description">
+
 
 <section id="정규분포-pdf-값을-계산하는-자신만의-함수-정의-및-정규분포-mu3-sigma2의-pdf-그리기" class="level2">
 
@@ -400,151 +372,131 @@ bigdata
 <span id="cb1-6"></span>
 <span id="cb1-7"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-8"><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-9"><span class="im">imp…</span></span><span id="cb1-10"></span><span id="cb1-11"><span class="kw"></span></span><span id="cb1-12"><span class="op"></span><span class="dv"></span><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span></span><span id="cb1-13"><span class="op"></span><span class="op"></span><span class="fl"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-14"><span class="cf"></span><span class="op"></span></span><span id="cb1-15"></span><span id="cb1-16"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="dv"></span><span class="dv"></span></span><span id="cb1-17"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-18"><span class="co"></span></span><span id="cb1-19"></span><span id="cb1-20"><span class="op"></span><span class="st"></span></span><span id="cb1-21"></span><span id="cb1-22"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section></a>
+<span id="cb1-9"><span class="im">imp…</span></span><span id="cb1-10"></span><span id="cb1-11"><span class="kw"></span></span><span id="cb1-12"><span class="op"></span><span class="dv"></span><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span></span><span id="cb1-13"><span class="op"></span><span class="op"></span><span class="fl"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-14"><span class="cf"></span><span class="op"></span></span><span id="cb1-15"></span><span id="cb1-16"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="dv"></span><span class="dv"></span></span><span id="cb1-17"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-18"><span class="co"></span></span><span id="cb1-19"></span><span id="cb1-20"><span class="op"></span><span class="st"></span></span><span id="cb1-21"></span><span id="cb1-22"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section>
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/hw3/hw3.html" class="no-external">
-<div class="listing-date">
-Jul 25, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 재희
 </div>
+<div class="listing-date">
+Jul 25, 2024
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="project" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1721785043835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1142">
-<div class="thumbnail">
-<p><a href="./posts/project1/fire_presentation.html" class="no-external"></a></p><a href="./posts/project1/fire_presentation.html" class="no-external">
-<p class="card-img-top"><img src="posts\project1\fire_presentation_files\figure-html\cell-13-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/project1/fire_presentation.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/project1/fire_presentation.html" class="no-external">계절별 화재발생 빈도 및 요인 분석</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/project1/fire_presentation.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="6" data-categories="project" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1721785043835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1142">
+<a href="./posts/project1/fire_presentation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\project1\fire_presentation_files\figure-html\cell-13-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+계절별 화재발생 빈도 및 요인 분석
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('project'); return false;">
 project
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/project1/fire_presentation.html" class="no-external">5 rows × 38 columns</a>
+<div class="card-text listing-description">
+5 rows × 38 columns
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/project1/fire_presentation.html" class="no-external">
-<div class="listing-date">
-Jul 24, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 명예소방관 시켜조 : 안상후, 오서연, 김주영, 김재희
 </div>
+<div class="listing-date">
+Jul 24, 2024
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721784131273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183">
-<div class="thumbnail">
-<p><a href="./posts/hw3/textbook_chap8.html" class="no-external"></a></p><a href="./posts/hw3/textbook_chap8.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw3\textbook_chap8_files\figure-html\cell-4-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw3/textbook_chap8.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw3/textbook_chap8.html" class="no-external">LS 빅데이터 스쿨 chap8</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw3/textbook_chap8.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="7" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721784131273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="183">
+<a href="./posts/hw3/textbook_chap8.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw3\textbook_chap8_files\figure-html\cell-4-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 chap8
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw3/textbook_chap8.html" class="no-external">데이터 불러오기</a>
+<div class="card-text listing-description">
+데이터 불러오기
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+재희
 </div>
-<div class="metadata">
-<a href="./posts/hw3/textbook_chap8.html" class="no-external">
 <div class="listing-date">
 Jul 22, 2024
 </div>
-<div class="listing-author">
-재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="bigdata" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721193001282" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
-<div class="thumbnail">
-<p><a href="./posts/hw2/index.html" class="no-external"></a></p><a href="./posts/hw2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2/index.html" class="no-external">LS 빅데이터 스쿨 HW2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="8" data-categories="bigdata" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721193001282" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
+<a href="./posts/hw2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW2
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw2/index.html" class="no-external">234 rows × 12 columns</a>
+<div class="card-text listing-description">
+234 rows × 12 columns
 </div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+재희
 </div>
-<div class="metadata">
-<a href="./posts/hw2/index.html" class="no-external">
 <div class="listing-date">
 Jul 17, 2024
 </div>
-<div class="listing-author">
-재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="bigdata" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1721192977846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="118">
-<div class="thumbnail">
-<p><a href="./posts/hw1/index.html" class="no-external"></a></p><a href="./posts/hw1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-11-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw1/index.html" class="no-external">LS 빅데이터 스쿨 HW1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw1/index.html" class="no-external"></a>
-</div>
+<div class="g-col-1" data-index="9" data-categories="bigdata" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1721192977846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="118">
+<a href="./posts/hw1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-11-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LS 빅데이터 스쿨 HW1
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
 bigdata
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw1/index.html" class="no-external">234 rows × 11 columns</a>
+<div class="card-text listing-description">
+234 rows × 11 columns
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/hw1/index.html" class="no-external">
-<div class="listing-date">
-Jul 16, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 재희
 </div>
-</a>
+<div class="listing-date">
+Jul 16, 2024
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
