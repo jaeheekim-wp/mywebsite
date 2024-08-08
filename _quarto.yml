@@ -6,12 +6,12 @@ website:
   title: "jaehee"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
-      - href: blog.qmd
-        text: Blog
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Blog
+        href: post/index.qmd
 format:
   html:
     theme: cosmo
